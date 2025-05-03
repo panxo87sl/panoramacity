@@ -6,7 +6,7 @@ const NavBar = () => {
       <nav>
         <div className="nav-right">
           <picture>
-            <img src="https://i.vgy.me/l50aSh.png" alt="l50aSh.png" />
+            <img src="https://i.vgy.me/Tu1fWo.png" alt="Tu1fWo.png" />
           </picture>
         </div>
         <div className="nav-left">

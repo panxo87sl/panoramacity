@@ -1,0 +1,7 @@
+Dudas:
+
+¿Donde agrego las librerias en React enfocandome en las buenas practicas? (ya que en el caso de las CSS y los font family por ejemplo es mala practica usarlo en el index.html)
+Sabiendo que puedo ahcer objetos planos, ¿sirve de algo ahora hacer clases?
+¿Donde se agregan las fuentes y otros CDNS si no es una buena practica agregarlas al index.html?
+¿Si quisiera implementar una estructura grid donde debo hacerla?
+¿Puedo usar tailwind?
