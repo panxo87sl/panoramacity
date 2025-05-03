@@ -1,0 +1,125 @@
+/* Reglas generales para evitar problemas de margenes y limites */
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 400px;
+}
+/* Reglas generales para evitar problemas de margenes y limites */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header picture {
+  height: 100px;
+}
+
+header picture img {
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* max-width: 1200px; <--cambie */
+  max-width: 100%;
+
+  margin: 0 auto;
+}
+.nav-right {
+  display: flex;
+  width: 50%;
+  justify-content: start;
+  align-items: center;
+}
+.nav-left {
+  display: flex;
+  width: 50%;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
+.material-icons {
+  font-size: 35px;
+}
+.icon-container {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: grey;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+input[type="text"] {
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+@media (max-width: 500px) {
+  input[type="text"] {
+    display: none; /* Ocupa todo el ancho disponible */
+  }
+}
+@media (max-width: 768px) {
+  input[type="text"] {
+    max-width: 150px; /* Ocupa todo el ancho disponible */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  input[type="text"] {
+    max-width: 300px; /* Un poco más ancho en tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  input[type="text"] {
+    max-width: 500px; /* Más ancho en pantallas grandes */
+  }
+}
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+main h2 {
+  display: flex;
+  justify-content: center;
+}
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  color: #555;
+}
+footer hr {
+  width: 80%;
+  border: 1px solid #ccc;
+  margin: 10px auto;
+}
