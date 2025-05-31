@@ -16,7 +16,7 @@ const EventoDetail = (props) => {
           className="event-info-link"
           id="enlace"
         >
-          Más información
+          Sitio Original
         </a>
       </section>
     </div>

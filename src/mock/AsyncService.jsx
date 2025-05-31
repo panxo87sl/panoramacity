@@ -86,18 +86,18 @@ export const getProducts = () => {
       } else {
         reject("Hubo un error, intente más tarde");
       }
-    }, 2000);
+    }, 1500);
   });
 };
 export const getOneProduct = (idEvento) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (!errorPeticion) {
-        let evento = eventos.find((item) => item.idEvento === Number(idEvento));
+        let evento = eventos.find((item) => item.key === Number(idEvento));
         resolve(evento);
       } else {
         reject("Hubo un error, intente más tarde");
       }
-    }, 3000);
+    }, 1500);
   });
 };

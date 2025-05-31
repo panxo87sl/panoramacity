@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const CardEvent = (props) => {
   const { id, imagen, nombre, productora, lugar, fecha, enlace } = props;
   return (
@@ -15,22 +17,25 @@ const CardEvent = (props) => {
           <strong>Fecha:</strong> {fecha}
         </p>
         <div className="event-info-buttons" id="botones">
+          <Link to={`/evento/${Number(id)}`} className="event-info-link">
+            Más información
+          </Link>
           <a
             href={enlace}
             target="_blank"
             className="event-info-link"
             id="enlace"
           >
-            Más información
+            sitio original
           </a>
-          <button
+          {/* <button
             className="event-like-link"
             data-nombre={nombre}
             data-eventoid={id}
             id="like"
           >
             Agregar
-          </button>
+          </button> */}
         </div>
       </div>
     </article>
