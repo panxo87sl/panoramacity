@@ -112,6 +112,14 @@ main h2 {
   display: flex;
   justify-content: center;
 }
+main h2 {
+  display: flex;
+  justify-content: center;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+}
 .event-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
