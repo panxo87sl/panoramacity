@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import EventoDetail from "./EventoDetail";
 
 const ItemDetailContainer = () => {
-  const [arrEvento, setArrEvento] = useState({});
+  const [arrEvento, setArrEvento] = useState();
   const { idEvento } = useParams();
 
   useEffect(() => {
@@ -15,7 +15,11 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-      <EventoDetail objEvento={arrEvento} />
+      {arrEvento ? (
+        <EventoDetail detalleEvento={arrEvento} />
+      ) : (
+        <p>Cargando evento...</p>
+      )}
     </div>
   );
 };

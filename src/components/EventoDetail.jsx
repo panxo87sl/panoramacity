@@ -1,10 +1,25 @@
 const EventoDetail = (props) => {
-  const { objEvento } = props;
+  const { detalleEvento } = props;
   return (
-    <main>
-      <h2>{}</h2>
-      <section className="event-list" id="lista-eventos"></section>
-    </main>
+    <div>
+      <h2>{detalleEvento.nombre}</h2>
+      <section className="event-list" id="lista-eventos">
+        <img src={detalleEvento.img} alt={detalleEvento.nombre} />
+        {/* <p>{detalleEvento.description}</p> */}
+        <p>
+          {detalleEvento.recinto}"-"{detalleEvento.ciudad}
+        </p>
+        <p>{detalleEvento.fecha}</p>
+        <a
+          href={detalleEvento.enlace}
+          target="_blank"
+          className="event-info-link"
+          id="enlace"
+        >
+          Más información
+        </a>
+      </section>
+    </div>
   );
 };
 
