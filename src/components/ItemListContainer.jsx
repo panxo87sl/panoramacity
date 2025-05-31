@@ -6,25 +6,30 @@ import { useParams } from "react-router-dom";
 const ItemListContainer = (props) => {
   const { textoBienvenida } = props;
   const [data, setData] = useState([]);
-  const { categoryId } = useParams();
+  const { idCategoria } = useParams();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     getProducts()
       .then((respuesta) => {
-        if (categoryId) {
-          setData(respuesta.filter((evento) => evento.category === categoryId));
+        if (idCategoria) {
+          setData(
+            respuesta.filter((evento) => evento.categoria === idCategoria)
+          );
         } else {
           setData(respuesta);
         }
       })
       .catch((error) => console.error(error))
       .finally(() => setLoading(false));
-  }, [categoryId]);
+  }, [idCategoria]);
   //
   return (
     <main>
-      <h2>{textoBienvenida}</h2>
+      <h2>
+        {textoBienvenida} {idCategoria}
+      </h2>
       {loading ? (
         <p className="loader">Cargando eventos...</p>
       ) : (

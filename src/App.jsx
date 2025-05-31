@@ -16,6 +16,11 @@ function App() {
             <ItemListContainer textoBienvenida="Bienvenido a Panorama City" />
           }
         />
+        <Route
+          path="/categoria/:idCategoria"
+          element={<ItemListContainer textoBienvenida="Aqui encontrarás " />}
+        />
+        <Route path="/evento/:idEvento" element={<ErrorPath />} />
         <Route path="*" element={<ErrorPath />} />
       </Routes>
       <Footer />

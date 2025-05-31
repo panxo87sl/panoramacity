@@ -86,7 +86,7 @@ export const getProducts = () => {
       } else {
         reject("Hubo un error, intente más tarde");
       }
-    }, 3000);
+    }, 2000);
   });
 };
 export const getOneProduct = (idEvento) => {
