@@ -8,7 +8,6 @@ const ItemList = ({ eventos }) => {
           key={evento.key}
           imagen={evento.imagen}
           nombre={evento.nombre}
-          productora={evento.productora}
           lugar={evento.recinto + " - " + evento.ciudad}
           fecha={evento.fecha}
           enlace={evento.enlace}

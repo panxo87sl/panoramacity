@@ -50,8 +50,20 @@ nav {
   width: 50%;
   justify-content: end;
   align-items: center;
-  gap: 10px;
+  gap: 80px;
 }
+.nav-left p {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-left p:hover {
+  font-weight: bold;
+  text-decoration: none;
+  color: gray;
+}
+
 .material-icons {
   font-size: 35px;
 }

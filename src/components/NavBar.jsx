@@ -18,13 +18,17 @@ const NavBar = () => {
             placeholder="Buscar nombre o lugar..."
             id="buscar"
           /> */}
-          <div>
+          <div className="item-navbar">
             <NavLink to="/categoria/conciertos">
               <p>conciertos</p>
             </NavLink>
+          </div>
+          <div className="item-navbar">
             <NavLink to="/categoria/deportes">
               <p>deportes</p>
             </NavLink>
+          </div>
+          <div className="item-navbar">
             <NavLink to="/categoria/comedia">
               <p>comedia</p>
             </NavLink>

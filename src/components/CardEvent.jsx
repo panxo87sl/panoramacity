@@ -5,9 +5,9 @@ const CardEvent = (props) => {
       <img src={imagen} alt={nombre} />
       <div className="event-info" id="informacion">
         <h2>{nombre}</h2>
-        <p id="productora">
+        {/* <p id="productora">
           <strong>Productora:</strong> {productora}
-        </p>
+        </p> */}
         <p id="lugar">
           <strong>Lugar:</strong> {lugar}
         </p>
