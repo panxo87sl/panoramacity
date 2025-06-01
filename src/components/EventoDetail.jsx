@@ -7,7 +7,7 @@ const EventoDetail = (props) => {
         <img src={detalleEvento.img} alt={detalleEvento.nombre} />
         {/* <p>{detalleEvento.description}</p> */}
         <p>
-          {detalleEvento.recinto}"-"{detalleEvento.ciudad}
+          {detalleEvento.recinto} - {detalleEvento.ciudad}
         </p>
         <p>{detalleEvento.fecha}</p>
         <a

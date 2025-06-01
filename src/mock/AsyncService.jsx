@@ -1,6 +1,6 @@
 const eventos = [
   {
-    key: 1,
+    id: "1",
     imagen:
       "https://cdn.getcrowder.com/images/60149882-50c9-4abf-bc97-6ee13b4b1e33-landing-limpio-1920x720-web-linkinpark.jpg",
     nombre: "Linkin Park",
@@ -13,7 +13,7 @@ const eventos = [
     categoria: "conciertos",
   },
   {
-    key: 2,
+    id: "2",
     imagen:
       "https://ticketing-uploads-1.ticketplus.global/images/shares/91b1a55a48201d30066e-ambas-1200x630.png",
     nombre: "Hans Zimmer - Orquesta Sinfónica",
@@ -26,7 +26,7 @@ const eventos = [
     categoria: "conciertos",
   },
   {
-    key: 3,
+    id: "3",
     imagen:
       "https://administrador.ventas-serviticket.cl/img/recinto/1744912888.jpg",
     nombre: "González Massú On Tour 2025",
@@ -39,7 +39,7 @@ const eventos = [
     categoria: "deportes",
   },
   {
-    key: 4,
+    id: "4",
     imagen:
       "https://ticketing-uploads-1.ticketplus.global/images/shares/2612e48561b612ad21a6-MM_-_Lucybell_1200x600.jpg",
     nombre: "LUCYBELL ECOS Tour Final",
@@ -51,7 +51,7 @@ const eventos = [
     categoria: "conciertos",
   },
   {
-    key: 5,
+    id: "5",
     imagen:
       "https://ticketing-uploads-1.ticketplus.global/images/shares/f967d870aad0a09eddca-c8bbdc0d-6014-43a0-9adc-67e63f7d9d95.jpeg",
     nombre: "Anime Sinfónico “Especial Ghibli”",
@@ -63,7 +63,7 @@ const eventos = [
     categoria: "conciertos",
   },
   {
-    key: 6,
+    id: "6",
     imagen:
       "https://static.enjoy.cl//bibliotecamedios//espectaculos//img_espectaculos_destacados_7656_20250528_131226.png",
     nombre: 'RODRIGO "GUATÓN" SALINAS',
@@ -93,7 +93,7 @@ export const getOneProduct = (idEvento) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (!errorPeticion) {
-        let evento = eventos.find((item) => item.key === Number(idEvento));
+        let evento = eventos.find((item) => item.id === idEvento);
         resolve(evento);
       } else {
         reject("Hubo un error, intente más tarde");
