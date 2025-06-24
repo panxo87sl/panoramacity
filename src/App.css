@@ -36,8 +36,11 @@ nav {
   align-items: center;
   /* max-width: 1200px; <--cambie */
   max-width: 100%;
-
   margin: 0 auto;
+}
+nav a {
+  color: inherit;
+  text-decoration: none;
 }
 .nav-right {
   display: flex;
@@ -66,6 +69,8 @@ nav {
 
 .material-icons {
   font-size: 35px;
+  text-decoration: none;
+  color: white;
 }
 .icon-container {
   position: relative;
@@ -129,6 +134,10 @@ main h2 {
   justify-content: center;
 }
 .loader {
+  display: flex;
+  justify-content: center;
+}
+.cart-body-text {
   display: flex;
   justify-content: center;
 }
@@ -221,4 +230,56 @@ footer hr {
   width: 80%;
   border: 1px solid #ccc;
   margin: 10px auto;
+}
+
+/* Carrito CSS */
+.cart-event-card {
+  display: flex;
+  align-items: center;
+  background-color: #272727;
+  color: #f5f5f5;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem auto;
+  gap: 1rem;
+  width: 600px;
+}
+.cart-event-card img {
+  align-items: center;
+  width: 180px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.cart-event-info {
+  align-items: flex-start;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-event-info h2 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #f5f5f5;
+}
+
+.cart-event-info p {
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+  color: #c9c9c9;
+}
+
+.cart-like-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #ff002b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none; /* Elimina el borde */
+  cursor: pointer; /* Mantiene el cursor de botón */
+  font-size: inherit; /* Mantiene el tamaño de fuente del texto */
+  font-family: inherit; /* Usa la misma fuente del sitio */
 }

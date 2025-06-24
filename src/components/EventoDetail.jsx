@@ -12,7 +12,7 @@ const EventoDetail = (props) => {
     <div>
       <h2>{detalleEvento.nombre}</h2>
       <section className="event-list" id="lista-eventos">
-        <img src={detalleEvento.img} alt={detalleEvento.nombre} />
+        <img src={detalleEvento.imagen} alt={detalleEvento.nombre} />
         {/* <p>{detalleEvento.description}</p> */}
         <p>
           {detalleEvento.recinto} - {detalleEvento.ciudad}

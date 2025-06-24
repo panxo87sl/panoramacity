@@ -8,7 +8,7 @@ const CardEvent = (props) => {
 
   const handleAddToCart = () => {
     if (!isInCart(id)) {
-      addToCart({ id, nombre }); // Aquí pasas datos mínimos para probar
+      addToCart({ id, imagen, nombre, productora, lugar, fecha, enlace }); // Aquí pasas datos mínimos para probar
     } else {
       removeCart(id);
     }
