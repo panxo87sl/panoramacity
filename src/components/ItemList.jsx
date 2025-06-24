@@ -5,6 +5,7 @@ const ItemList = ({ eventos }) => {
     <section className="event-list" id="lista-eventos">
       {eventos.map((evento) => (
         <CardEvent
+          key={evento.id}
           id={evento.id}
           imagen={evento.imagen}
           // productora={productora}

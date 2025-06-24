@@ -14,9 +14,7 @@ const ItemListContainer = (props) => {
     getProducts()
       .then((respuesta) => {
         if (idCategoria) {
-          setData(
-            respuesta.filter((evento) => evento.categoria === idCategoria)
-          );
+          setData(respuesta.filter((evento) => evento.categoria === idCategoria));
         } else {
           setData(respuesta);
         }
@@ -30,11 +28,7 @@ const ItemListContainer = (props) => {
       <h2>
         {textoBienvenida} {idCategoria}
       </h2>
-      {loading ? (
-        <p className="loader">Cargando eventos...</p>
-      ) : (
-        <ItemList eventos={data} />
-      )}
+      {loading ? <p className="loader">Cargando eventos...</p> : <ItemList eventos={data} />}
     </main>
   );
 };
