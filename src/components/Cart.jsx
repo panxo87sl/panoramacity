@@ -28,9 +28,14 @@ const Cart = () => {
           ))}
         </div>
       )}
-      <Link to="/" className="cart-body-text">
-        Volver al inicio
-      </Link>
+      <div className="cart-link-container">
+        <Link to="/Checkout" className="cart-finish-link">
+          Agendar Eventos
+        </Link>
+        <Link to="/" className="cart-body-text">
+          Volver al inicio
+        </Link>
+      </div>
     </main>
   );
 };

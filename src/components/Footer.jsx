@@ -3,8 +3,7 @@ const Footer = () => {
     <footer>
       <hr />
       <p>
-        <strong>Francisco Orellana</strong> - CODERHOUSE ReactJS - Comisión:
-        73690 - Entrega Número 2
+        <strong>Francisco Orellana</strong> - CODERHOUSE ReactJS - Comisión: 73690 - Entrega Final
       </p>
     </footer>
   );

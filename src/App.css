@@ -137,10 +137,6 @@ main h2 {
   display: flex;
   justify-content: center;
 }
-.cart-body-text {
-  display: flex;
-  justify-content: center;
-}
 .event-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -233,6 +229,10 @@ footer hr {
 }
 
 /* Carrito CSS */
+.cart-body-text {
+  display: flex;
+  justify-content: center;
+}
 .cart-event-card {
   display: flex;
   align-items: center;
@@ -282,4 +282,45 @@ footer hr {
   cursor: pointer; /* Mantiene el cursor de botón */
   font-size: inherit; /* Mantiene el tamaño de fuente del texto */
   font-family: inherit; /* Usa la misma fuente del sitio */
+}
+
+.cart-link-container {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 30px;
+  width: 100%;
+}
+.cart-finish-link {
+  display: flex;
+  justify-content: center;
+  width: 8rem;
+  margin-top: 30px;
+  padding: 0.5rem 1rem;
+  background: #0056b3;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none; /* Elimina el borde */
+  cursor: pointer; /* Mantiene el cursor de botón */
+  font-size: inherit; /* Mantiene el tamaño de fuente del texto */
+  font-family: inherit; /* Usa la misma fuente del sitio */
+}
+
+.form-input-container {
+  margin-bottom: 1rem;
+  max-width: 500px;
+}
+
+.form-input {
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.input-email {
+  max-width: 500px;
+  width: 100%;
+  border: 1px solid #ccc;
 }
