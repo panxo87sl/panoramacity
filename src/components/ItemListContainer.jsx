@@ -2,7 +2,7 @@ import ItemList from "./ItemList";
 import { getProducts } from "../mock/AsyncService";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../service/firebase";
 
 const ItemListContainer = (props) => {
@@ -14,8 +14,17 @@ const ItemListContainer = (props) => {
   //Firebase
   useEffect(() => {
     setLoading(true);
-    //conexion con la colección
-    const eventosCollection = collection(db, "eventos");
+    //conexion con la colección basica
+    // const eventosCollection = collection(db, "eventos");
+    //
+    //opcion if que no funciono, con query incluida
+    // if (idCategoria) {
+    //   setEventosCollection(query(collection(db, "eventos")), where("categoria", "==", idCategoria));
+    // } else {
+    //   setEventosCollection(collection(db, "eventos"));
+    // }
+    //Opcion if resumido, funcional
+    const eventosCollection = idCategoria ? query(collection(db, "eventos"), where("categoria", "==", idCategoria)) : collection(db, "eventos");
     //pedir datos
     getDocs(eventosCollection)
       .then((response) => {
@@ -25,11 +34,14 @@ const ItemListContainer = (props) => {
             id: doc.id,
           };
         });
-        if (idCategoria) {
-          setData(list.filter((evento) => evento.categoria === idCategoria));
-        } else {
-          setData(list);
-        }
+        setData(list); //Se guarda la colección que se va a mostrar
+
+        //Filtrar lista utilizando filter
+        // if (idCategoria) {
+        //   setData(list.filter((evento) => evento.categoria === idCategoria));
+        // } else {
+        //   setData(list);
+        // }
       })
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));

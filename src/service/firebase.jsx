@@ -1,6 +1,6 @@
+import { getFirestore } from "firebase/firestore";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -11,7 +11,7 @@ const firebaseConfig = {
   projectId: "panoramacity-coder73690",
   storageBucket: "panoramacity-coder73690.firebasestorage.app",
   messagingSenderId: "1024743138081",
-  appId: "1:1024743138081:web:69e76ec6128ae60f555460",
+  appId: "1:1024743138081:web:c1948ef5f708fd05555460",
 };
 
 // Initialize Firebase

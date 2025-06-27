@@ -311,6 +311,7 @@ footer hr {
 
 .button-busy {
   cursor: not-allowed;
+  pointer-events: none;
   background: #333 !important;
 }
 
