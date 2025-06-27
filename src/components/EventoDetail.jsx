@@ -1,5 +1,7 @@
 const EventoDetail = (props) => {
+  console.log(props.ciudad);
   const { detalleEvento } = props;
+  if (!detalleEvento) return null;
   return (
     <div>
       <h2>{detalleEvento.nombre}</h2>
