@@ -8,11 +8,12 @@ const ItemList = ({ eventos }) => {
           key={evento.id}
           id={evento.id}
           imagen={evento.imagen}
-          // productora={productora}
+          productora={evento.productora}
           nombre={evento.nombre}
           lugar={evento.recinto + " - " + evento.ciudad}
           fecha={evento.fecha}
           enlace={evento.enlace}
+          categoria={evento.categoria}
         />
       ))}
     </section>

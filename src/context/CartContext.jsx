@@ -20,7 +20,11 @@ export const CartProvider = ({ children }) => {
     setCart((prev) => prev.filter((item) => item.id !== "0"));
   };
 
+  const cartTotal = () => {
+    cart.length;
+  };
+
   const isInCart = (id) => cart.some((item) => item.id === id); //devuelve true of false para saber is un evento esta en la agenda (carrito) o no
 
-  return <CartContext.Provider value={{ cart, addToCart, removeCart, isInCart, clearCart }}>{children}</CartContext.Provider>;
+  return <CartContext.Provider value={{ cart, addToCart, removeCart, isInCart, clearCart, cartTotal }}>{children}</CartContext.Provider>;
 };

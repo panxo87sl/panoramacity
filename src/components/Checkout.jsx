@@ -6,16 +6,18 @@ import { db } from "../service/firebase";
 
 const Checkout = () => {
   // Estados para cada campo
-  const [nombre, setNombre] = useState("");
-  const [apellido, setApellido] = useState("");
-  const [email, setEmail] = useState("");
-  const [emailValidate, setEmailValidated] = useState("");
-  const { cart, clearCart } = useContext(CartContext);
+  const [nombre, setNombre] = useState();
+  const [apellido, setApellido] = useState();
+  const [email, setEmail] = useState();
+  const [emailValidate, setEmailValidated] = useState();
+  const { cart, clearCart, cartTotal } = useContext(CartContext);
   const [orderID, setOrderID] = useState();
+  console.log(cart);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Nombre: ${nombre}\nApellido: ${apellido}\nEmail: ${email}\nCalendario: ${email}`);
+    alert(`Nombre: ${nombre}\nApellido: ${apellido}\nEmail: ${email}\nTotal Eventos en agenda: ${cart.length}`);
+    const totalEventos = cart.length;
     const buyer = {
       nombre: nombre,
       apellido: apellido,
@@ -24,7 +26,7 @@ const Checkout = () => {
     let orden = {
       comprador: buyer,
       agenda: cart,
-      totalEventos: cart.length,
+      total: totalEventos,
       data: serverTimestamp(),
     };
     const registro = collection(db, "orders");
