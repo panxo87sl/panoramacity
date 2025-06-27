@@ -309,6 +309,11 @@ footer hr {
   font-family: inherit; /* Usa la misma fuente del sitio */
 }
 
+.button-busy {
+  cursor: not-allowed;
+  background: #333 !important;
+}
+
 .form-input-container {
   margin-bottom: 1rem;
   max-width: 500px;
@@ -323,4 +328,14 @@ footer hr {
   max-width: 500px;
   width: 100%;
   border: 1px solid #ccc;
+}
+
+.input-error {
+  border: 2px solid red !important;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 4px;
 }

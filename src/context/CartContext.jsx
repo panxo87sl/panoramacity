@@ -17,7 +17,7 @@ export const CartProvider = ({ children }) => {
   };
 
   const clearCart = () => {
-    setCart((prev) => prev.filter((item) => item.id !== "0"));
+    setCart([]);
   };
 
   const cartTotal = () => {
