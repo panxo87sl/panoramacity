@@ -1,12 +1,4 @@
-//importar el hook para la utilización de contexto
-import { useContext } from "react";
-//importar el tipo de contexto que voy a ocupar
-import { CartContext } from "../context/CartContext";
-
 const EventoDetail = (props) => {
-  // const context = useContext(CartContext);
-  const { cart } = useContext(CartContext);
-  console.log(cart);
   const { detalleEvento } = props;
   return (
     <div>

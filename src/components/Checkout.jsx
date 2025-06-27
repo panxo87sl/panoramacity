@@ -12,11 +12,9 @@ const Checkout = () => {
   const [emailValidate, setEmailValidated] = useState();
   const { cart, clearCart, cartTotal } = useContext(CartContext);
   const [orderID, setOrderID] = useState();
-  console.log(cart);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Nombre: ${nombre}\nApellido: ${apellido}\nEmail: ${email}\nTotal Eventos en agenda: ${cart.length}`);
     const totalEventos = cart.length;
     const buyer = {
       nombre: nombre,

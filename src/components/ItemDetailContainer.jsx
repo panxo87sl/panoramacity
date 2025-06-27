@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { getOneProduct } from "../mock/AsyncService";
 import { useParams } from "react-router-dom";
 import EventoDetail from "./EventoDetail";
 import { collection, doc, getDoc } from "firebase/firestore";
