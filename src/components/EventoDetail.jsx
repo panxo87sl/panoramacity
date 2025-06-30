@@ -1,11 +1,10 @@
 const EventoDetail = (props) => {
-  console.log(props.ciudad);
   const { detalleEvento } = props;
   if (!detalleEvento) return null;
   return (
-    <div>
+    <main>
       <h2>{detalleEvento.nombre}</h2>
-      <section className="event-list" id="lista-eventos">
+      <section className="event-detail-info" id="lista-eventos">
         <img src={detalleEvento.imagen} alt={detalleEvento.nombre} />
         {/* <p>{detalleEvento.description}</p> */}
         <p>
@@ -16,7 +15,7 @@ const EventoDetail = (props) => {
           Sitio Original
         </a>
       </section>
-    </div>
+    </main>
   );
 };
 

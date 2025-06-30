@@ -340,3 +340,19 @@ footer hr {
   font-size: 0.8rem;
   margin-top: 4px;
 }
+
+.event-detail-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.event-detail-info img {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+.event-detail-info a {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+}
