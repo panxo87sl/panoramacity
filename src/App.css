@@ -216,6 +216,34 @@ main h2 {
 .event-like-disabled:hover {
   background-color: rgb(34, 34, 34);
 }
+
+.event-like-link:active {
+  background-color: #ff5c5c; /* un rojo más claro temporal */
+  transform: scale(0.97); /* un mini efecto de "presionado" */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.event-detail-button {
+  display: flex;
+  justify-content: center;
+  width: 8rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 30px;
+  background: #ff002b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none; /* Elimina el borde */
+  cursor: pointer; /* Mantiene el cursor de botón */
+  font-size: inherit; /* Mantiene el tamaño de fuente del texto */
+  font-family: inherit; /* Usa la misma fuente del sitio */
+}
+.event-detail-button:active {
+  background-color: #ff5c5c; /* un rojo más claro temporal */
+  transform: scale(0.97); /* un mini efecto de "presionado" */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
 footer {
   text-align: center;
   padding: 10px;

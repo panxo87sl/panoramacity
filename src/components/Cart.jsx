@@ -19,7 +19,8 @@ const Cart = () => {
               <img src={item.imagen} alt={item.nombre} />
               <div className="cart-event-info">
                 <h2>{item.nombre}</h2>
-                <p>{item.fecha}</p>
+                <p>${item.precio}</p>
+                <p>cantidad: {item.cantidad}</p>
               </div>
               <button className="cart-like-link" onClick={() => removeCart(item.id)}>
                 Quitar

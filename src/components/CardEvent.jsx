@@ -3,15 +3,11 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const CardEvent = (props) => {
-  const { addToCart, isInCart, removeCart, cart } = useContext(CartContext);
+  const { addToCart, cart } = useContext(CartContext);
   const { id, imagen, nombre, productora, lugar, fecha, enlace, categoria, precio, stock } = props;
 
   const handleAddToCart = () => {
-    if (!isInCart(id)) {
-      addToCart({ id, imagen, nombre, productora, lugar, fecha, enlace, categoria, precio, stock }); // Aquí pasas datos mínimos para probar
-    } else {
-      removeCart(id);
-    }
+    addToCart({ id, imagen, nombre, productora, lugar, fecha, enlace, categoria, precio, stock }); // Aquí pasas datos mínimos para probar
   };
 
   return (
@@ -38,8 +34,8 @@ const CardEvent = (props) => {
           {/* <a href={enlace} target="_blank" className="event-like-link" id="enlace">
             sitio original
           </a> */}
-          <button className={isInCart(id) ? "event-like-link event-like-disabled" : "event-like-link"} data-nombre={nombre} data-eventoid={id} id="like" onClick={handleAddToCart}>
-            {isInCart(id) ? "Quitar" : "Agregar"}
+          <button className="event-like-link" data-nombre={nombre} data-eventoid={id} id="like" onClick={handleAddToCart}>
+            Agregar
           </button>
         </div>
       </div>

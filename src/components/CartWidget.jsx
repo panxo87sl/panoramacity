@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const CartWidget = () => {
-  const { cart } = useContext(CartContext);
+  const { cartLength } = useContext(CartContext);
   return (
     <div className="icon-container">
       <i className="material-icons">event</i>
@@ -10,10 +10,10 @@ const CartWidget = () => {
         id="notification-badge"
         className="notification-badge"
         style={{
-          backgroundColor: cart.length > 0 ? "red" : "grey",
+          backgroundColor: cartLength() > 0 ? "red" : "grey",
         }}
       >
-        {cart.length}
+        {cartLength()}
       </span>
     </div>
   );
