@@ -3,7 +3,7 @@ import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { cart, removeCart } = useContext(CartContext);
+  const { cart, removeCart, clearCart, cartTotal } = useContext(CartContext);
 
   return (
     <main>
@@ -26,12 +26,22 @@ const Cart = () => {
               </button>
             </article>
           ))}
+          <div>
+            <hr />
+            <h2>Total Compra: ${cartTotal()}</h2>
+          </div>
+
+          <div className="cart-link-container">
+            <Link to="/Checkout" className="cart-finish-link">
+              Agendar Eventos
+            </Link>
+            <button className="cart-finish-button" onClick={() => clearCart()}>
+              Vaciar Carrito
+            </button>
+          </div>
         </div>
       )}
-      <div className="cart-link-container">
-        <Link to="/Checkout" className="cart-finish-link">
-          Agendar Eventos
-        </Link>
+      <div>
         <Link to="/" className="cart-body-text">
           Volver al inicio
         </Link>

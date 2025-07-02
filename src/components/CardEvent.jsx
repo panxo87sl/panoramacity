@@ -4,11 +4,11 @@ import { CartContext } from "../context/CartContext";
 
 const CardEvent = (props) => {
   const { addToCart, isInCart, removeCart, cart } = useContext(CartContext);
-  const { id, imagen, nombre, productora, lugar, fecha, enlace, categoria } = props;
+  const { id, imagen, nombre, productora, lugar, fecha, enlace, categoria, precio, stock } = props;
 
   const handleAddToCart = () => {
     if (!isInCart(id)) {
-      addToCart({ id, imagen, nombre, productora, lugar, fecha, enlace, categoria }); // Aquí pasas datos mínimos para probar
+      addToCart({ id, imagen, nombre, productora, lugar, fecha, enlace, categoria, precio, stock }); // Aquí pasas datos mínimos para probar
     } else {
       removeCart(id);
     }
@@ -27,6 +27,9 @@ const CardEvent = (props) => {
         </p>
         <p id="fecha">
           <strong>Fecha:</strong> {fecha}
+        </p>
+        <p id="precio">
+          <strong>Precio: $</strong> {precio}
         </p>
         <div className="event-info-buttons" id="botones">
           <Link to={`/evento/${id}`} className="event-info-link">

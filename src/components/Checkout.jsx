@@ -1,7 +1,7 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { CartContext } from "../context/CartContext";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { db } from "../service/firebase";
 
 const Checkout = () => {
@@ -10,12 +10,19 @@ const Checkout = () => {
   const [apellido, setApellido] = useState();
   const [email, setEmail] = useState();
   const [emailValidate, setEmailValidated] = useState();
-  const { cart, clearCart } = useContext(CartContext);
+  const { cart, clearCart, cartTotal } = useContext(CartContext);
   const [orderID, setOrderID] = useState();
   const eventList = [...cart]; //hace una copia real de carrito
   const [savedEventList, setSavedEventList] = useState(); //guardar la info de carrito y evitar la perdida al renderizar nuevamente el componente por el cambio de estado de OrderID, para mostrar la info nuevamente al final como confirmación.
   const [errors, setErrors] = useState({}); //para controlar las validaciones del formulario
   const [busy, setBusy] = useState(false); //para evitar apretar el boton Finalizar del formulario mas de una vez
+  const navigate = useNavigate(); //para redireccionar
+
+  useEffect(() => {
+    if (cart.length === 0) {
+      navigate("*"); // para no ingresar directamente
+    }
+  }, [cart]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

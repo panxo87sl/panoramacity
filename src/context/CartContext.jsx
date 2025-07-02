@@ -21,10 +21,14 @@ export const CartProvider = ({ children }) => {
   };
 
   const cartTotal = () => {
-    cart.length;
+    return cart.reduce((aux, item) => aux + item.precio, 0);
+  };
+
+  const cartLength = () => {
+    return cart.length;
   };
 
   const isInCart = (id) => cart.some((item) => item.id === id); //devuelve true of false para saber is un evento esta en la agenda (carrito) o no
 
-  return <CartContext.Provider value={{ cart, addToCart, removeCart, isInCart, clearCart, cartTotal }}>{children}</CartContext.Provider>;
+  return <CartContext.Provider value={{ cart, addToCart, removeCart, isInCart, clearCart, cartTotal, cartLength }}>{children}</CartContext.Provider>;
 };

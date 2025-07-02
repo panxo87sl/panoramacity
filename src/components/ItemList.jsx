@@ -14,6 +14,8 @@ const ItemList = ({ eventos }) => {
           fecha={evento.fecha}
           enlace={evento.enlace}
           categoria={evento.categoria}
+          precio={evento.precio}
+          stock={evento.stock}
         />
       ))}
     </section>

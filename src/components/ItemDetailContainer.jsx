@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import EventoDetail from "./EventoDetail";
 import { collection, doc, getDoc } from "firebase/firestore";
 import { db } from "../service/firebase";
+import { CartContext } from "../context/CartContext";
 
 const ItemDetailContainer = () => {
   const [Loading, setLoading] = useState();
