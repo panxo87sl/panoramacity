@@ -16,13 +16,6 @@ const Checkout = () => {
   const [savedEventList, setSavedEventList] = useState(); //guardar la info de carrito y evitar la perdida al renderizar nuevamente el componente por el cambio de estado de OrderID, para mostrar la info nuevamente al final como confirmación.
   const [errors, setErrors] = useState({}); //para controlar las validaciones del formulario
   const [busy, setBusy] = useState(false); //para evitar apretar el boton Finalizar del formulario mas de una vez
-  const navigate = useNavigate(); //para redireccionar
-
-  useEffect(() => {
-    if (cart.length === 0) {
-      navigate("*"); // para no ingresar directamente
-    }
-  }, [cart]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -124,6 +117,7 @@ const Checkout = () => {
                 <div className="cart-event-info">
                   <h2>{item.nombre}</h2>
                   <p>{item.fecha}</p>
+                  <p>Entradas: {item.cantidad}</p>
                 </div>
               </article>
             ))}
