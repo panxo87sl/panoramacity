@@ -29,14 +29,14 @@ const CardEvent = (props) => {
         </p>
         <div className="event-info-buttons" id="botones">
           <Link to={`/evento/${id}`} className="event-info-link">
-            Más información
+            Comprar Entradas
           </Link>
           {/* <a href={enlace} target="_blank" className="event-like-link" id="enlace">
             sitio original
           </a> */}
-          <button className="event-like-link" data-nombre={nombre} data-eventoid={id} id="like" onClick={handleAddToCart}>
+          {/* <button className="event-like-link" data-nombre={nombre} data-eventoid={id} id="like" onClick={handleAddToCart}>
             Agregar
-          </button>
+          </button> */}
         </div>
       </div>
     </article>

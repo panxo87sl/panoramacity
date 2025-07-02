@@ -1,4 +1,5 @@
 import { CartContext } from "../context/CartContext";
+import ItemCount from "./ItemCount";
 import { useContext } from "react";
 
 const EventoDetail = (props) => {
@@ -30,13 +31,12 @@ const EventoDetail = (props) => {
           {detalleEvento.recinto} - {detalleEvento.ciudad}
         </p>
         <p>{detalleEvento.fecha}</p>
+        <p>Precio Entrada: ${detalleEvento.precio}</p>
         <div className="cart-link-container">
+          <ItemCount stock={detalleEvento.stock} onAdd={(cantidad) => addToCart(detalleEvento, cantidad)} />
           <a href={detalleEvento.enlace} target="_blank" className="event-info-link" id="enlace">
             Sitio Original
           </a>
-          <button className="event-detail-button" data-nombre={detalleEvento.nombre} data-eventoid={detalleEvento.id} id="like" onClick={handleAddToCart}>
-            Agregar
-          </button>
         </div>
       </section>
     </main>

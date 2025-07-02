@@ -9,12 +9,12 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   let totalItems = 0;
   //todas las funciones que modifican el estado del carro
-  const addToCart = (item) => {
+  const addToCart = (item, cantidad) => {
     const existing = cart.find((e) => e.id === item.id);
     if (existing) {
-      setCart((prev) => prev.map((e) => (e.id === item.id ? { ...e, cantidad: e.cantidad + 1 } : e)));
+      setCart((prev) => prev.map((e) => (e.id === item.id ? { ...e, cantidad: e.cantidad + cantidad } : e)));
     } else {
-      setCart((prev) => [...prev, { ...item, cantidad: 1 }]);
+      setCart((prev) => [...prev, { ...item, cantidad: cantidad }]);
     }
   };
 

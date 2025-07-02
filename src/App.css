@@ -396,4 +396,23 @@ footer hr {
   display: flex;
   flex-direction: column;
   width: 100px;
+  align-items: center;
+}
+
+.item-count-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item-count-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.item-count-text {
+  color: red;
+  font-size: 14px;
 }
